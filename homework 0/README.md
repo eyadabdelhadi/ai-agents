@@ -81,40 +81,11 @@ ai-agents/                          (repo root)
 
 ## Setup
 
-### Step 1: Get the code
+> Before starting, ensure that the repo is forked into your own GitHub account
+> and cloned locally — see the "Getting the code" section in the
+> [root README](../README.md) if you haven't done this yet.
 
-Fork the course repo into your own GitHub account (click **Fork** at the top of
-https://github.com/spocs-coders/ai-agents), then clone your fork locally:
-
-```bash
-git clone https://github.com/YOUR-USERNAME/ai-agents
-cd ai-agents
-```
-
-All your work happens directly in your fork — you don't need push access to
-the course repo. You'll reuse this same fork for every homework released
-throughout the course.
-
-Add the course repo as an `upstream` remote so you can pull in new homeworks
-as they're released:
-
-```bash
-git remote add upstream https://github.com/spocs-coders/ai-agents
-```
-
-When a new homework is released, pull it into your fork with:
-
-```bash
-git fetch upstream
-git merge upstream/main
-git push origin main
-```
-
-Since each homework lives in its own folder, this should merge cleanly. If you
-hit a conflict, it means you edited a file that was also updated upstream —
-resolve it by keeping your changes and re-adding the new content, then commit.
-
-### Step 2: Run the setup script
+### Step 1: Run the setup script
 
 `setup.sh`, `requirements.txt`, and `.env` all live at the **repo root**, not
 inside `homework 0/` — this venv is shared across every homework in the
@@ -139,7 +110,7 @@ about a missing package after pulling a new homework, just re-run
 > this project's packages separate from other Python projects on your machine.
 > Think of it as a clean sandbox.
 
-### Step 3: Add your OpenRouter API key
+### Step 2: Add your OpenRouter API key
 
 Open the `.env` file that was just created and replace the placeholder:
 
@@ -156,7 +127,7 @@ ignore it automatically).
 > your code (or your git history) would have your key. The `.env` file keeps
 > secrets separate from code.
 
-### Step 4: Activate the virtual environment
+### Step 3: Activate the virtual environment
 
 Every time you open a new terminal to work on this project, you need to activate
 the virtual environment (from the repo root) so Python uses the right packages:
@@ -171,7 +142,7 @@ venv\Scripts\activate
 
 You'll know it's active when you see `(venv)` at the start of your terminal prompt.
 
-### Step 5: Run the app
+### Step 4: Run the app
 
 With the venv activated, `cd` into this homework's folder and run its app:
 
