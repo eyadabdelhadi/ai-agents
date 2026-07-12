@@ -39,33 +39,35 @@ JavaScript displays the reply in the chat panel — no page reload
 ## Project File Map
 
 ```
-homework 0/
-├── app.py                          ← START HERE: runs the web server
-├── setup.sh                        ← one-time setup script
-├── requirements.txt                ← Python packages this app needs
+ai-agents/                          (repo root)
+├── setup.sh                        ← one-time setup script (shared across homeworks)
+├── requirements.txt                ← Python packages, shared across homeworks
 ├── .env.example                    ← template for your API key
 │
-└── flask_app/
-    ├── __init__.py                 ← creates the Flask app, connects everything
-    ├── routes.py                   ← defines URL paths (/, /resume)
+└── homework 0/
+    ├── app.py                      ← START HERE: runs the web server
     │
-    ├── utils/
-    │   ├── llm.py                  ← talks to the OpenRouter AI API
-    │   ├── socket_events.py        ← handles real-time chat messages
-    │   └── database.py             ← reads/writes the SQLite database
-    │
-    ├── templates/
-    │   ├── layout.html             ← shared nav bar and page structure
-    │   ├── home.html               ← your bio page  ← EDIT THIS
-    │   └── resume.html             ← resume display + chat panel
-    │
-    ├── static/
-    │   ├── css/style.css           ← all styling for the app
-    │   └── images/headshot.png     ← your profile photo  ← REPLACE THIS
-    │
-    └── database/
-        ├── create_tables/          ← SQL files that define the database schema
-        └── initial_data/           ← CSV files with your resume data  ← EDIT THESE
+    └── flask_app/
+        ├── __init__.py             ← creates the Flask app, connects everything
+        ├── routes.py               ← defines URL paths (/, /resume)
+        │
+        ├── utils/
+        │   ├── llm.py              ← talks to the OpenRouter AI API
+        │   ├── socket_events.py    ← handles real-time chat messages
+        │   └── database.py         ← reads/writes the SQLite database
+        │
+        ├── templates/
+        │   ├── layout.html         ← shared nav bar and page structure
+        │   ├── home.html           ← your bio page  ← EDIT THIS
+        │   └── resume.html         ← resume display + chat panel
+        │
+        ├── static/
+        │   ├── css/style.css       ← all styling for the app
+        │   └── images/headshot.png ← your profile photo  ← REPLACE THIS
+        │
+        └── database/
+            ├── create_tables/      ← SQL files that define the database schema
+            └── initial_data/       ← CSV files with your resume data  ← EDIT THESE
 ```
 
 **Suggested reading order for understanding the code:**
@@ -114,18 +116,23 @@ resolve it by keeping your changes and re-adding the new content, then commit.
 
 ### Step 2: Run the setup script
 
-From the `homework 0` directory:
+`setup.sh`, `requirements.txt`, and `.env` all live at the **repo root**, not
+inside `homework 0/` — this venv is shared across every homework in the
+course, so you only run this once, right after cloning:
 
 ```bash
-cd "homework 0"
 bash setup.sh
 ```
 
 This script will:
 - Check that Python 3 is installed
-- Create a virtual environment (`venv/`) for this project
+- Create a virtual environment (`venv/`) at the repo root
 - Install all required packages
 - Create your `.env` file from the template
+
+Future homeworks may add new packages to `requirements.txt` — if `pip` errors
+about a missing package after pulling a new homework, just re-run
+`bash setup.sh` to pick up the new dependencies.
 
 > **What is a virtual environment?**
 > A `venv` is an isolated Python installation just for this project. It keeps
@@ -152,7 +159,7 @@ ignore it automatically).
 ### Step 4: Activate the virtual environment
 
 Every time you open a new terminal to work on this project, you need to activate
-the virtual environment so Python uses the right packages:
+the virtual environment (from the repo root) so Python uses the right packages:
 
 ```bash
 # On Mac / Linux:
@@ -166,7 +173,10 @@ You'll know it's active when you see `(venv)` at the start of your terminal prom
 
 ### Step 5: Run the app
 
+With the venv activated, `cd` into this homework's folder and run its app:
+
 ```bash
+cd "homework 0"
 python app.py
 ```
 
