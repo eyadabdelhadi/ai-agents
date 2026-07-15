@@ -1,5 +1,4 @@
-"position_id","inst_id","title","responsibilities","start_date","end_date"
-"1","1","Instructor","Teach classes; mostly NLP and Web design.","2019-01-01",NULL
-"2","1","Researcher","Perform research at interface of AI and healthcare.","2019-01-01",NULL
-"3","2","National Scholar","Helped the government plan the future of science","2021-01-01","2021-12-31"
-"4","3","Associate Director","Used data science to assess corporation and nations","2019-01-01","2020-01-01"
+position_id,inst_id,title,responsibilities,start_date,end_date
+1,1,UI/UX Team Leader,"Lead multidisciplinary teams in the development of digital products, mobile applications, and web platforms.",01/01/2017,NULL
+3,2,Senior UX Designer,"Synthesized over 100 comprehensive UI/UX user stories and conceptual wireframes spanning iOS, Android, and WebCMS platforms.",01/01/2021,30/04/2021
+4,3,"Senior Graphic, Web & Mobile UI/UX Designer","Architected end-to-end, user-centered design solutions and responsive layouts for prominent corporate applications.",01/02/2018,01/06/2018

@@ -1,5 +1,6 @@
-"skill_id","experience_id","name","skill_level"
-"1","2","Javascript","7"
-"2","2","Python","10"
-"3","2","HTML","9"
-"4","2","CSS","5"
+skill_id,experience_id,name,skill_level
+1,1,Figma,10
+2,1,Adobe XD,10
+3,1,Design Thinking,10
+4,1,Interaction Design,10
+5,1,HTML/CSS,8

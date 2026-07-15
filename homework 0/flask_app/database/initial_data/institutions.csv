@@ -1,4 +1,4 @@
-"inst_id","type","name","department","address","city","state","zip"
-"1","Academia","Michigan State University","Computer Science",NULL,"East Lansing","Michigan",NULL
-"2","Government","National Institutes of Health",NULL,NULL,"Bethesda","Maryland",NULL
-"3","Industry","Standard and Poor's Financial Services","Ratings",NULL,"New York City","New York",NULL
+inst_id,type,name,department,address,city,state,zip
+1,Private Sector,AuraLine Solutions LTD,UI/UX Designer,NULL,Famagusta,North Cyprus,NULL
+2,Private Sector,TenTime,UX Design,NULL,London,United Kingdom,NULL
+3,Private Sector,YourVision,Web Development,NULL,Riyadh,Saudi Arabia,NULL
